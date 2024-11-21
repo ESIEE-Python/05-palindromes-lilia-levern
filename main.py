@@ -1,16 +1,24 @@
 #### Fonction secondaire
-
-
-def ispalindrome(p):
-
-    # votre code ici
-    
+"""jjjj"""
+import string
+def ispalindrome(mot):
+    """palindrome"""
+    mot = mot.lower()
+    mot=mot.replace(" ","")
+    table=str.maketrans("éàëêûâèôç","eaeeuaeoc")
+    mot=mot.translate(table)
+    table1=str.maketrans("", "", string.punctuation)
+    mot = mot.translate(table1)
+    palindrome = mot[::-1]
+    if palindrome == mot:
+        print(mot+""+" est un palindrome")
+        return True
     return False
-
 #### Fonction principale
 
 
 def main():
+    """jjjj"""
 
     # vos appels à la fonction secondaire ici
 
